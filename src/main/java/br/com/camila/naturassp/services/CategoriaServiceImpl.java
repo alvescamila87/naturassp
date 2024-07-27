@@ -1,13 +1,12 @@
-package services;
+package br.com.camila.naturassp.services;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import dao.CategoriaDAO;
-import model.Categoria;
+import br.com.camila.naturassp.dao.CategoriaDAO;
+import br.com.camila.naturassp.model.Categoria;
 
 @Component
 public class CategoriaServiceImpl implements ICategoriaService {
@@ -50,7 +49,10 @@ public class CategoriaServiceImpl implements ICategoriaService {
 
 	@Override
 	public ArrayList<Categoria> recuperarPorPalavraChave(String palavraChave) {
-		return dao.findByNomeContaining(palavraChave);
+		if(palavraChave != null) {
+			return dao.findByNomeContaining(palavraChave);
+		}
+		return null;
 	}
 
 }

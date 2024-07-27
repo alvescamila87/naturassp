@@ -1,4 +1,4 @@
-package model;
+package br.com.camila.naturassp.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

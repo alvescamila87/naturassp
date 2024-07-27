@@ -1,10 +1,10 @@
-package dao;
+package br.com.camila.naturassp.dao;
 
 import java.util.ArrayList;
 
 import org.springframework.data.repository.CrudRepository;
 
-import model.Categoria;
+import br.com.camila.naturassp.model.Categoria;
 
 public interface CategoriaDAO extends CrudRepository<Categoria, Integer>{
 	

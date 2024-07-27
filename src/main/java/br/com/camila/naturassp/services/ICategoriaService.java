@@ -1,8 +1,8 @@
-package services;
+package br.com.camila.naturassp.services;
 
 import java.util.ArrayList;
 
-import model.Categoria;
+import br.com.camila.naturassp.model.Categoria;
 
 public interface ICategoriaService {
 	
