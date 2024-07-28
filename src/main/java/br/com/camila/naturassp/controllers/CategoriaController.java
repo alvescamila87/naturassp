@@ -33,15 +33,7 @@ public class CategoriaController {
 		}
 		return ResponseEntity.badRequest().build();
 	}
-	
-	@GetMapping("/categorias/{palavraChave}")
-	public ResponseEntity<ArrayList<Categoria>> listarPorPalavraChave2(@PathVariable String palavraChave){
-		if(palavraChave != null) {
-			return ResponseEntity.ok().body(service.recuperarPorPalavraChave(palavraChave));
-		}
-		return ResponseEntity.notFound().build();
-	}
-			
+				
 	@PostMapping("/categorias")
 	public ResponseEntity<Categoria> cadastrarCategoria(@RequestBody Categoria categoria){
 		Categoria resultado = service.inserirNovaCategoria(categoria);
