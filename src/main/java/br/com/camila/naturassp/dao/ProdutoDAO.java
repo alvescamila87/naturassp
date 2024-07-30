@@ -9,5 +9,7 @@ import br.com.camila.naturassp.model.Produto;
 
 public interface ProdutoDAO extends CrudRepository<Produto, Integer>{
 
-	public ArrayList<Produto> findAllBtCategoria(Categoria categoria);
+	public ArrayList<Produto> findAllByCategoria(Categoria categoria);
+	
+	public ArrayList<Produto> findAllOrderByPreco();
 }
