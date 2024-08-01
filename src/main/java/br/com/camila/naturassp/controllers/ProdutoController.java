@@ -20,9 +20,9 @@ public class ProdutoController {
 		return (ArrayList<Produto>) dao.findAll(); 
 	}
 	
-	/*@GetMapping("/produtos/preco")
+	@GetMapping("/produtos")
 	public ArrayList<Produto> listarProdutosPreco(){
 		return (ArrayList<Produto>)dao.findAllOrderByPreco();
-	}*/
+	}
 
 }
