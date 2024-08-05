@@ -13,16 +13,13 @@ import br.com.camila.naturassp.model.Produto;
 public class ProdutoController {
 	
 	@Autowired
-	ProdutoDAO dao;
+	private ProdutoDAO dao;
 	
 	@GetMapping("/produtos")
 	public ArrayList<Produto> listarTodos(){
-		return (ArrayList<Produto>) dao.findAll(); 
+		return (ArrayList<Produto>) dao.findAllByCategoria(null);
 	}
 	
-	@GetMapping("/produtos")
-	public ArrayList<Produto> listarProdutosPreco(){
-		return (ArrayList<Produto>)dao.findAllOrderByPreco();
-	}
+	
 
 }
